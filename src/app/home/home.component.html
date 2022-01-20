@@ -1,0 +1,193 @@
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/pizzaThrist"><i><strong>PizzaThirst</strong></i></a>
+        </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/Home">Pizzas</a></li>
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="/orders">Orders</a></li>
+
+        <li>
+            <button routerLink="/cart" class="btn btn-primary">
+                <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </li>
+
+        <li><p class="navbar-text">Welcome</p></li>
+        <li><button class="btn btn-danger" (click)="onLogout()"><span class="glyphicon glyphicon-log-in"> </span>LogOut</button></li>
+        
+      </ul>
+    </div>
+</nav>
+
+
+<div class="container body-content">
+        
+
+    <form action="/Pizzas/ListAll" method="post">
+       
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PYXxwpRviRAk9-cqVnmGv4WBNokmT_-HFJG3go-dATNFyS9farxGJsgUzZDvrfuWPc5v6J-D5XOWcwwGRGdALCL6e2RkV-DJ6iop2frYXMMjzS2IOnlr_-tOoGAYMyg9Tq_5glqIjtx6zzJgBc_nvE"></form>
+    
+    <div class=".col-md-3 .col-md-offset-3"></div>
+    
+        <button class="btn btn-primary" routerLink="/pizzalist">All Pizzas</button> 
+    <hr>
+    
+    
+            
+            <div id="PizzaSummaryId">
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Capricciosa" src="/assets/Images/2.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 500.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/1">Capsicum Pizza</a>
+                        </h3>
+                        <h5><b>Category: Veg - Pizza</b></h5>
+                        <p>A taste pizza recipe with capsicum, onions, tomatoes and cheese</p>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Hawaii" src="/assets/Images/3.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 170.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/2">Onion Cheesy Pizza</a>
+                        </h3>
+                        <h5><b>Category: Veg-Pizza</b></h5>
+                        <p>
+                            Veggie PiSuper chessy onion,mozzarella, oregano, chilli flakes, salt and black Pepper</p>
+                    </div>
+                  
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Margarita" src="/assets/Images/4.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 400.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/3">Mushroom Pizza</a>
+                        </h3>
+                        <h5><b>Category: Veg-Piza</b></h5>
+                        <p>Delightful combination of onion,capsicum, tomatoes and Mushroom</p>
+                    </div>
+                  
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Pescatore" src="https://isinginthekitchen.files.wordpress.com/2014/07/dsc_0231.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 80.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/4">Pescatore</a>
+                        </h3>
+                        <h5><b>Category: Veg-Pizza</b></h5>
+                        <p>A pizza with taste from the ocean.</p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Barcelona" src="http://barcelona-home.com/blog/wp-content/upload/pizza/Pizzeria%20Los%20Amigos/pizza-jamon-dulce-y-champinone.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 370.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/5">Barcelona</a>
+                        </h3>
+                        <h5><b>Category: Non-Veg Pizza</b></h5>
+                        <p>A pizza with taste from Spain, Barcelona</p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of La Carne" src="https://www.davannis.com/wp-content/uploads/2015/03/five-meat.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 175.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/6">La Carne</a>
+                        </h3>
+                        <h5><b>Category: Non-Veg Pizza</b></h5>
+                        <p>Italian pizza with lot's of delicious meat.</p>
+                    </div>
+                  
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Kebab Special" src="http://2.bp.blogspot.com/_3cSn3Qz_4IA/THkYqKwGw1I/AAAAAAAAAPg/ybKpvRbjDWE/s1600/matsl%C3%A4kten+002.JPG">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 285.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/7">Kebab Special</a>
+                        </h3>
+                        <h5><b>Category: Veg-Pizza</b></h5>
+                        <p>A special pizza with kebab for the hungry one.</p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Flying Jacob" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Pizza_Hawaii_Special_p%C3%A5_Pizzeria_Papillon_i_Sala_1343.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 189.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/8">Flying Jacob</a>
+                        </h3>
+                        <h5><b>Category: Non-Veg Pizza</b></h5>
+                        <p>Flying pizza from the sky, with taste of banana.</p>
+                    </div>
+                  
+                    
+                </div>
+            </div>
+            
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img alt="Picture of Veggie" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Vegetarian_pizza.jpg">
+                    <div class="caption">
+                        <h3 class="pull-right">₹ 150.00</h3>
+                        <h3>
+                            <a href="/Pizzas/DisplayDetails/9">Veggie</a>
+                        </h3>
+                        <h5><b>Category: Veg-Pizza</b></h5>
+                        <p>Veggie Pizza for vegitarians</p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            
+           
+            
+
+   

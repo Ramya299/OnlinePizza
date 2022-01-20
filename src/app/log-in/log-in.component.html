@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/pizzaThrist"><i><strong>PizzaThirst</strong></i></a>
+  </div>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/sign-up"  ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/log-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+  <div class="col-md-4">
+    <h2>Please Log in here</h2>
+  <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+    <h4>Enter the Details Below</h4>
+
+      <div class="form-group" >
+        <label for="exampleInputEmail1">Username</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="username" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+  
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" placeholder="Password">
+      </div>
+
+      <button type="submit"  class="btn btn-primary" >LogIn</button>
+      <p id="demo"></p>
+    </form>
+    
+  </div>
+  </div>

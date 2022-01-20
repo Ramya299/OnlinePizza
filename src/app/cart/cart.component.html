@@ -1,0 +1,84 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/pizzathirst"><i><strong>PizzaThirst</strong></i></a>
+  </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/Home">Pizzas</a></li>
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="/orders">Orders</a></li>
+
+        <li>
+            <button routerLink="/cart" class="btn btn-primary">
+                <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </li>
+
+        <li><p class="navbar-text">welcome</p></li>
+        <li><button class="btn btn-danger" (click)="onLogout()"><span class="glyphicon glyphicon-log-in"> </span>LogOut</button></li>
+        
+      </ul>
+    </div>
+</nav>
+
+
+
+    <ng-container *ngIf="true">
+        <div class="container">
+            <div class="card-table">
+                <div class="cart-product">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Sr.No</th>
+                                <th>PizzaId</th>
+                                <th>Pizza Name</th>
+                             
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                              <th>Delete</th>
+                      
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of pizzas; let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{item.pizzaID}}</td>
+                                  <td>{{item.pizzaName}}</td>
+                                    <td>{{item.description}}</td>
+                                    <td>{{item.price}}</td>
+                                         <td>{{item.category}}</td>
+                                         <td>
+                                            <button (click)="removeItem(item)" class="btn btn-primary">
+                                                <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                                                <div style="font-size: 10px;" class="badge bg-danger">
+                                                Delete</div>
+                                            </button>   
+                                            
+                                        </td>
+                                  </tr>
+                            <tr>
+                                <td colspan="4"></td>
+                                <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                                <td><button routerLink="/Home" class="btn btn-primary">Shop More</button></td>
+                                <td><button  routerLink="/check-out" class="btn btn-success">Checkout</button></td>
+                                <td><strong></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    
+  
+    
+    
+    
+    
+          
+    

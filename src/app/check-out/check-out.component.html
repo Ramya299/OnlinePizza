@@ -1,0 +1,63 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/pizzathirst"><i><strong>PizzaThirst</strong></i></a>
+        </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/Home">Pizzas</a></li>
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="/orders">Orders</a></li>
+
+        <li>
+          <button routerLink="/cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+        </li>
+
+        <li><p class="navbar-text">welcome</p></li>
+        <li><button class="btn btn-danger" (click)="onLogout()"><span class="glyphicon glyphicon-log-in"> </span>LogOut</button></li>
+        
+      </ul>
+    </div>
+</nav>
+
+<div class="container" name="divActive" style="border:1px solid black">
+    <!-- <img src="/assets/Images/R.png" width="500px" height="400px" alt="img"> -->
+    <div class="col-md-4">
+    <h3>User Details</h3>
+   
+    <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSumbit()" >
+    <div class="form-group required">
+      <label >Name</label>
+      <input type="text" class="form-control" id="exampleInputusername1"  formControlName="Name" placeholder="Enter Your Name">
+        <label type="text-danger" *ngIf="service.formModel.get('username')?.touched &&  service.formModel.get('username')?.errors">This field is Mandatory</label>
+    </div >
+    <div class="form-group required">
+    <label >MobileNumber</label>
+      <input type="text" class="form-control" id="exampleInputusername1"  formControlName="MobileNumber" placeholder="Enter Mobile Number">
+    </div >
+    <div class="form-group required">
+        <label >Place</label>
+          <input type="text" class="form-control" id="exampleInputusername1"  formControlName="Place" placeholder="Enter Area Name">
+    </div>
+    <div class="form-group required">
+            <label >City</label>
+              <input type="text" class="form-control" id="exampleInputusername1"  formControlName="city" placeholder="Enter  City Name">
+    </div>
+    <div class="form-group required">
+    <label >Email</label>
+    <input type="text" class="form-control" id="exampleInputusername1"  formControlName="Email" placeholder="Enter Your Email address">
+    </div>
+   <br>
+    <div class="form-row">
+        <div class="form-group col-md-8 offset-md-2">
+            <button type="submit" class="btn btn-lg btn-primary" >Check Out</button>
+        </div>
+    </div>
+    
+  </form>
+ </div>
+</div>
